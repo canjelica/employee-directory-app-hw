@@ -18,7 +18,7 @@ def get_employee_details():
 
     # Get employee name from search form (passed in the request object)
     name = request.args.get("employee_name")
-    emmployee_info = request.args.get("employee-details")
+    employee_info = request.args.get("employee-details")
 
     # If the user didn't type anything, ask them to.
     if not name:
