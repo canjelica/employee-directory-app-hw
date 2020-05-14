@@ -12,12 +12,13 @@ def home():
     return render_template("home.html")
 
 
-@app.route("/employee_search")
+@app.route("/search")
 def get_employee_details():
     """Process search and return the employee details page."""
 
     # Get employee name from search form (passed in the request object)
     name = request.args.get("employee_name")
+    emmployee_info = request.args.get("employee-details")
 
     # If the user didn't type anything, ask them to.
     if not name:
